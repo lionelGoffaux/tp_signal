@@ -17,5 +17,6 @@ def get_squarewave(amp, freq, sample_freq, n_sample):  # TODO: refactor
     sin[sin < 0] = -1
     return x, amp * sin
 
+
 def to_db(h):
     return 20*np.log10(np.maximum(np.abs(h), 1e-5))
