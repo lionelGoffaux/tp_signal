@@ -123,8 +123,14 @@ So in order to increase the accuracy, it's better to set the sample rate as clos
 to two times the higher frequency that we want to observe. 
 For the NTFD parameter, that only change the space between the frequency samples in the spectrum.
 So, the higher it is the most continuous the plot seems. 
+We choose N = 45 because N must be greater than 2d where d is difference between the two closest normalized frequency to avoid lobes overlaping.
 For the number of samples in the time's space, we observe that the shorter the signal lasts in time the larger the spike corresponding to
 that signal frequency is and vice versa. There is probably a link with the uncertainty principle in quantum mechanics.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.25]{q4.png}
+\end{figure}
 
 
 \section{Weighting Window Effect}
@@ -141,16 +147,18 @@ That fits well with the given table.
 \subsection*{Question 6}
 
 
-For the first signal, the rectangular window seems to be the least bad one. For the second sinusoid, it's the Blackman window which does the better job. But we don't know why.
+For the first graph, we observe that the rectangular window is the best beacuse the size of the main lobe is smaller than the other ones. For the second graph the
+difference between the two frequency is bigger, so the main lobe of the smallest frequency is drowned into the secondary lobes of the biggest one. So we choose
+the Blackman window because the secondary lobes of this window are smaller.
 
 \begin{figure}[H]
     \centering
-\includegraphics[scale=0.25]{q61.png}
+\includegraphics[scale=0.5]{q61.png}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-\includegraphics[scale=0.25]{q62.png}
+\includegraphics[scale=0.5]{q62.png}
 \end{figure}
 
 \end{document}
