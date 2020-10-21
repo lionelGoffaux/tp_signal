@@ -47,46 +47,61 @@ Signal processing\\
 
 \date{\today\\
 Academic Year 2020-2021\\
-Bachelor's degree in Computer Science\\
-\vspace{1cm}
-Faculté des Sciences, Université de Mons}
+Bachelor's degree in Computer Science}
 
 \begin{document}
 
 \maketitle
-\pagebreak
 
 \section{Approximation of second order filters}
 \subsection*{Band-pass filter:}
 \begin{enumerate}
-    \item Finding $\theta$ : we computed $\theta = \frac{f}{2\pi}Fe = 1.88$.
-    \item Finding $\rho$ : we fixed K = 1 and we drawn this graph representing the height differency between \{120Hz,121Hz\} and \{119Hz,120Hz\}.
+    \item Find $\theta$ : we compute $\theta = \frac{f}{2\pi}Fe = 1.88$.
+    \item Find $\rho$ : we set K = 1 and we draw this graph representing the height difference between \{120Hz,121Hz\} and \{119Hz,120Hz\}.
     \begin{figure}[h]
         \centering
-        \includegraphics[scale=0.25]{q1.png}
+        \includegraphics[scale=0.5]{q11.png}
     \end{figure}\\
-    we fixed $\rho$ = 0.87
-    \item Finding K : we computed $K = \frac{1}{A_{120Hz}}=0.2432$.
+    we set $\rho$ = 0.87
+    \item Find K : we computed $K = \frac{1}{A_{120Hz}}=0.2432$.
 \end{enumerate}
 The transfer function of the pass-band filter is 
 $$H(Z) = K\frac{1 - \cos{(\theta)} Z^{-1}}{1 - 2\rho \cos{(\theta)Z^{-1} +\rho^2Z^{-2}}}$$
-where K = 0.2432, $\rho$ = 0.87 and $\theta$ = 1.88.
+where K = 0.2432, $\rho$ = 0.87 and $\theta$ = 1.88. The frequency response of this filter is the following.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{q12.png}
+\end{figure}\\
 
 
-\subsection*{Stop-band filter:}
+\subsection*{Band-stop filter:}
 \begin{enumerate}
-    \item Finding $\theta$ : we computed $\theta = \frac{50}{2\pi}Fe = 0.78$.
-    \item Finding $\rho$ : we fixed K = 1 and we drawn this graph representing the attenuation at 49.9 Hz and 50.1 Hz. We want to attenuate these frequency at -47dB
+    \item Find $\theta$ : we compute $\theta = \frac{50}{2\pi}Fe = 0.78$.
+    \item Find $\rho$ : we set K = 1 and we draw this graph representing the attenuation at 49.9 Hz and 50.1 Hz. 
+    We want to attenuate these frequencies at -47dB.
     \begin{figure}[h]
         \centering
-        \includegraphics[scale=0.25]{q1.png}
+        \includegraphics[scale=0.5]{q13.png}
     \end{figure}\\
-    we fixed $\rho$ = 0.56
-    \item Finding K : we computed $K = \frac{1}{A_{120Hz}}=0.6713$.
+    We set $\rho = 0.56$.
+    \item Find K : we computed $K = \frac{1}{A_{120Hz}}=0.6713$.
 \end{enumerate}
 The transfer function of the stop-band filter is 
 $$H(Z) = K\frac{1 - 2\cos{(\theta)} Z^{-1} + Z^{-2}}{1 - 2\rho \cos{(\theta)Z^{-1} +\rho^2Z^{-2}}}$$
-where K = 0.6714, $\rho$ = 0.56 and $\theta$ = 0.78.
+where K = 0.6714, $\rho$ = 0.56 and $\theta$ = 0.78. The frequency response corresponding is the following.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{q14.png}
+\end{figure}
+
+\subsection*{Band-pass + band-stop filter}
+
+Now we can add these two filters together and plot their frequency response. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{q15.png}
+\end{figure}
 
 
 \end{document}
