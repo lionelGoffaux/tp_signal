@@ -57,15 +57,15 @@ Bachelor's degree in Computer Science}
 \subsection*{Band-pass filter:}
 \begin{enumerate}
     \item Find $\theta$ : we compute $\theta = \frac{f}{2\pi}Fe = 1.88$.
-    \item Find $\rho$ : we set K = 1 and we draw this graph representing the height difference between \{120Hz,121Hz\} and \{119Hz,120Hz\}.
+    \item Find $\rho$ : we set K = 1 and we draw this graph representing the height difference between \{$A_{120\text{Hz}},A_{121\text{Hz}}$\} and \{$A_{119\text{Hz}},A_{120\text{Hz}}$\}.
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.5]{q11.png}
     \end{figure}
     we set $\rho$ = 0.87
-    \item Find K : we compute $K = \frac{1}{A_{120Hz}}=0.2432$.
+    \item Find K : we compute $K = \frac{1}{A_{120\text{Hz}}}=0.2432$.
 \end{enumerate}
-The transfer function of the pass-band filter is 
+The transfer function of the band-pass filter is 
 $$H(Z) = K\frac{1 - \cos{(\theta)} Z^{-1}}{1 - 2\rho \cos{(\theta)Z^{-1} +\rho^2Z^{-2}}}$$
 where K = 0.2432, $\rho$ = 0.87 and $\theta$ = 1.88. The frequency response as well as the poles and zeros position of this filter are the following.
 
@@ -84,17 +84,17 @@ where K = 0.2432, $\rho$ = 0.87 and $\theta$ = 1.88. The frequency response as w
 \begin{enumerate}
     \item Find $\theta$ : we compute $\theta = \frac{50}{2\pi}Fe = 0.78$.
     \item Find $\rho$ : we set K = 1 and we draw this graph representing the attenuation at 49.9 Hz and 50.1 Hz. 
-    We want to attenuate these frequencies at -47dB.
+    We want to attenuate these frequencies at -40dB.
     \begin{figure}[h]
         \centering
         \includegraphics[scale=0.5]{q13.png}
     \end{figure}\\
-    We set $\rho = 0.56$.
-    \item Find K : we computed $K = \frac{1}{A_{120Hz}}=0.6713$.
+    We set $\rho = 0.82$.
+    \item Find K : we computed $K = \frac{1}{A_{120\text{Hz}}}=0.6713$.
 \end{enumerate}
-The transfer function of the stop-band filter is 
+The transfer function of the band-stop filter is 
 $$H(Z) = K\frac{1 - 2\cos{(\theta)} Z^{-1} + Z^{-2}}{1 - 2\rho \cos{(\theta)Z^{-1} +\rho^2Z^{-2}}}$$
-where K = 0.6714, $\rho$ = 0.56 and $\theta$ = 0.78. The frequency response as well as the poles and zeros position corresponding are the following.
+where K = 0.6714, $\rho$ = 0.82 and $\theta$ = 0.78. The frequency response as well as the poles and zeros position corresponding are the following.
 
 \begin{figure}[H]
     \centering
